@@ -20,10 +20,12 @@
   color: #6c6b6b;
 }
 
-h1 {
-  margin: 20px;
-}
-
-p {
+main {
+  width: 100%;
   margin: 33px;
 }
+
+teble {
+
+}
+
