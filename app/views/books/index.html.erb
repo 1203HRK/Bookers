@@ -15,7 +15,7 @@
        <tr>
          <td><%= book.title%></td>
          <td><%= book.body %></td>
-         <td><a href="#" >Show</a> <a href="#" >Edit</a> <a href="#" >Destroy</a></td>
+         <td><%= link_to "Show", book_path(book.id) %> <%= link_to 'Edit', edit_book_path(book.id) %> <a href="#" >Destroy</a></td>
        </tr>
       <% end %>
     </tbody>
