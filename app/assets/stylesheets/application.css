@@ -25,7 +25,11 @@ main {
   margin: 33px;
 }
 
-teble {
+table td {
+  padding: 5px;
+}
 
+table td a {
+  padding-left: 5px;
 }
 
