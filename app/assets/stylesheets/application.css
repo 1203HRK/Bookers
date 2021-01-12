@@ -19,16 +19,93 @@
   box-sizing: border-box;
 }
 
-main {
+body {
   width: 100%;
-  margin: 33px;
+  font-family: "メイリオ";
+
+}
+
+.home p, table,  h4, .action {
+  font-size: 13px;
+}
+
+.bottom {
+  padding: 2px;
+  margin: 7px 0px;
+}
+
+.flash {
+  color: green;
+}
+
+.flash-error {
+  color: red;
+}
+
+/* home */
+
+.home {
+  margin-top: 22px;
+  margin-left: 33px;
+}
+
+h1 {
+  font-size: 1.7em;
+}
+
+.home p {
+  margin: 17px 33px;
+}
+
+/* books */
+
+main {
+  margin: 20px 33px;
+}
+
+table {
+  margin-left: 10px;
 }
 
 table td {
-  padding: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
 }
 
-table td a {
-  padding-left: 5px;
+.new {
+  margin-top: 15px;
+}
+
+.new h4 {
+  font-weight: normal;
+  margin-top: 15px;
+}
+
+/* show */
+
+.show p {
+  margin: 25px 70px;
+}
+
+.action {
+  margin-left: 20px;
+}
+
+.action a {
+  padding: 0px 1px;
+}
+/* edit */
+
+.edit {
+  margin: 20px 33px;
+}
+
+.edit h4 {
+  font-weight: normal;
+  margin-top: 15px;
+}
+
+.edit-action {
+  font-size: 13px;
 }
 
