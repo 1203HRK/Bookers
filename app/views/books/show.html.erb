@@ -1,7 +1,7 @@
 <% if flash[:notice] %>
-    <div class="flash">
          <%= flash[:notice] %>
-    </div>
+   <% else %>
+    <%= flash[:notice] %>
 <% end %>
 
 <p>title:<%= @book.title %></p>

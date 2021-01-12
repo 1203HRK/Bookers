@@ -1,9 +1,13 @@
 <main>
 
  <% if flash[:notice] %>
-    <div class="flash">
-         <%= flash[:notice] %>
-    </div>
+   <div class="flash">
+   <%= flash[:notice] %>
+   </div>
+ <% else %>
+   <div class="flash">
+    <%= flash[:alert] %>
+   </div>
 <% end %>
 
   <h2>Books</h2>
@@ -22,8 +26,7 @@
        <tr>
          <td><%= book.title%></td>
          <td><%= book.body %></td>
-         <td><%= link_to "Show", book_path(book.id) %> <%= link_to 'Edit', edit_book_path(book.id) %> <%= link_to "Destroy", book_path(book.id), method: :delete %></td>
-       </tr>
+         <td><%= link_to "Show", book_path(book.id) %> <%= link_to 'Edit', edit_book_path(book.id) %> <%= link_to "Destroy", book_path(book.id), method: :delete, data: { confirm: 'Are you sure?' } %></td> </tr>
       <% end %>
     </tbody>
   </table>
