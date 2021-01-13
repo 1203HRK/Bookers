@@ -6,14 +6,14 @@ class BooksController < ApplicationController
   end
 
   def create
-    book = Book.new(book_params)
-    book.save
-    if book.save
+    @book = Book.new(book_params)
+    @book.save
+    if @book.save
      flash[:notice] = "Book was successfully updated."
-     redirect_to book_path(book)
+     redirect_to book_path(@book)
     else
-     flash[:alert] = "error"
-     flash.keep(:alert)
+     @books = Book.all
+     render("books/index")
     end
   end
 
@@ -31,6 +31,9 @@ class BooksController < ApplicationController
     if @book.save
      flash[:notice] = "Book was successfully updated."
      redirect_to book_path(@book)
+    else
+     @books = Book.all
+     render("books/edit")
     end
   end
 
@@ -47,3 +50,4 @@ class BooksController < ApplicationController
     params.require(:book).permit(:title, :body)
   end
 end
+
